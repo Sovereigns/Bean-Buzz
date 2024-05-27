@@ -4,63 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bean Buzz</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index2.css">
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="Index.html">Bean Buzz</a>
+        <div class="navbar">
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="menu-bar"></div>
+                <div class="menu-bar"></div>
+                <div class="menu-bar"></div>
             </div>
-            <ul class="nav-links">
-                <li><a href="Index.html">Inicio</a></li>
+            <div class="logo">
+                <a href="#">Bean Buzz</a>
+            </div>
+            <div class="cart-icon">
+                <a href="#" id="cart-link"><img src="cart-icon.png" alt="Carrito"></a>
+                <span class="cart-count" id="cart-count">(0)</span>
+            </div>
+        </div>
+        <nav id="nav-menu" class="nav-menu">
+            <ul>
+                <li><a href="#home">Inicio</a></li>
                 <li><a href="#about">Sobre Nosotros</a></li>
                 <li><a href="#menu">Menú</a></li>
                 <li><a href="#gallery">Galería</a></li>
                 <li><a href="#contact">Contacto</a></li>
             </ul>
         </nav>
+    </header>
+    <main>
         <section id="home" class="welcome-section">
-            <div class="container">
-                <h1>Bienvenidos a Bean Buzz</h1>
+            <div class="welcome-content">
+                <h1>Bean Buzz -<br>Tu destino<br>para el mejor<br>café</h1>
+                <p>Bienvenido a Bean Buzz, la cafetería donde podrás disfrutar del mejor café. Descubre nuestra variedad de bebidas y ambiente acogedor.</p>
+                <button>Explora</button>
+            </div>
+            <div class="welcome-image">
+                <img src="img/Bienvenida.jpg" alt="Imagen de la cafetería">
             </div>
         </section>
-    </header>
-
-    <section id="about" class="about">
+        <section id="menu" class="menu-section">
+            <h2>Menú de Cafés</h2>
+            <div class="menu-content">
+                <div class="menu-item">
+                    <img src="img/variedad.jpg" alt="Menú de Cafés">
+                    <button>Descubre nuestra variedad</button>
+                </div>
+                <div class="menu-item">
+                    <img src="img/sabores.jpg" alt="Sabores únicos y deliciosos">
+                    <button>Ver más</button>
+                </div>
+            </div>
+        </section>
+        <section id="gallery" class="gallery-section">
+            <div class="gallery-content">
+                <div class="gallery-item">
+                    <img src="img/Tienda1.jpg" alt="Café Delicioso y Amigable">
+                    <p>Café Delicioso y Amigable<br>$10.99</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/Tienda2.jpg" alt="Café Especial Bean Buzz">
+                    <p>Café Especial Bean Buzz<br>$5.99</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/Tienda3.jpg" alt="Cafetería Bean Buzz">
+                    <p>Cafetería Bean Buzz<br>$10.99</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/Tienda4.jpg" alt="Cafetería Bean Buzz">
+                    <p>Cafetería Bean Buzz<br>$1.00</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/Tienda5.jpg" alt="Selección de Cafés Especiales">
+                    <p>Selección de Cafés Especiales<br>$5.00</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/Tienda6.jpg" alt="Variedad de Cafés Especiales">
+                    <p>Variedad de Cafés Especiales<br>$95.00</p>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="about-section">
             <h2>Sobre Nosotros</h2>
-            <p>En Bean Buzz, cada taza cuenta una 
-                historia. Somos tu destino para el mejor café
-                y momentos especiales. Desde nuestro primer 
-                sorbo hasta el último, te ofrecemos una experiencia
-                acogedora y deliciosa. Únete a nosotros para
-                disfrutar de café excepcional, bocadillos 
-                deliciosos y buenos momentos. ¡Te esperamos
-                en Bean Buzz!</p>
-    </section>
-
-    <section id="gallery">
-        <h2>Nuestra Galería</h2>
-        <div class="image-gallery">
-            <button id="prevBtn">&lt;</button>
-            <img src="img/pikaso_texttoimage_Una-cafeteria-se-llama-Bean-Buzz.jpeg" alt="Postres y café">
-            <img src="img/pikaso_texttoimage_Una-cafeteria-se-llama-Bean-Buzz (1).jpeg" alt="Interior de la cafetería">
-            <img src="img/pikaso_texttoimage_Una-cafeteria-se-llama-Bean-Buzz (2).jpeg" alt="Taza de café">
-            <img src="img/pikaso_texttoimage_Una-cafeteria-se-llama-Bean-Buzz (3).jpeg" alt="Postres y café">
-            <img src="img/pikaso_texttoimage_Una-cafeteria-se-llama-Bean-Buzz (4).jpeg" alt="Postres y café">
-            <button id="nextBtn">&gt;</button>
-        </div>
-    </section>
-    
+            <p>Bean Buzz es una cafetería que busca crear un ambiente acogedor y amigable para sus clientes. Nos especializamos en ofrecer una amplia variedad de cafés de alta calidad. Nuestro objetivo es brindar una experiencia única a través de un diseño minimalista y atractivo para nuestros visitantes.</p>
+            <div class="about-image">
+                <img src="img/Sobre nosotros.jpg" alt="Sobre Nosotros">
+            </div>
+        </section>
+        <section id="contact" class="contact-section">
+            <h2>Contacto</h2>
+            <div class="contact-content">
+                <form id="contact-form">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+                <div class="contact-image">
+                    <img src="img/contacto.jpg" alt="Contacto">
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
-        <p style="text-align: left;">&copy; 2024 Bean Buzz</p>
-        <div class="social-media">
-            <a href="https://facebook.com/beanbuzz">Facebook</a>
-            <a href="https://twitter.com/beanbuzz">Twitter</a>
-            <a href="https://instagram.com/beanbuzz">Instagram</a>
+        <div class="footer-content">
+            <div class="footer-subscribe">
+                <h3>Descubre más sobre nosotros</h3>
+                <form id="subscribe-form">
+                    <input type="email" id="subscribe-email" name="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+            <div class="footer-info">
+                <p>Información</p>
+                <p>cafeteria@beanbuzz.com<br>123-456-7890</p>
+            </div>
+            <div class="footer-social">
+                <p>Síguenos</p>
+                <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="img/twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="img/tiktok-icon.png" alt="TikTok"></a>
+            </div>
         </div>
-        <button id="btnScrollToTop">Ir arriba</button>
-    </footer>    
-    <script src="index.js"></script>
+        <p>&copy; 2023 Bean Buzz. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="index2.js"></script>
 </body>
 </html>
