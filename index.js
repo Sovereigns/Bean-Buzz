@@ -1,38 +1,49 @@
-document.addEventListener("DOMContentLoaded", function() {
-    var btnScrollToTop = document.getElementById('btnScrollToTop');
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('nav-menu');
 
-    btnScrollToTop.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const images = document.querySelectorAll('.image-gallery img');
-    let currentIndex = 0;
-
-    prevBtn.addEventListener('click', function() {
-        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
-        updateImage();
+    menuToggle.addEventListener('click', function () {
+        navMenu.classList.toggle('active');
     });
 
-    nextBtn.addEventListener('click', function() {
-        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
-        updateImage();
+    const contactForm = document.getElementById('contact-form');
+
+    contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (!name || !email || !message) {
+            alert('Por favor, complete todos los campos.');
+        } else if (!validateEmail(email)) {
+            alert('Por favor, ingrese un correo electrónico válido.');
+        } else {
+            alert('Mensaje enviado correctamente.');
+            contactForm.reset();
+        }
     });
 
-    function updateImage() {
-        images.forEach((image, index) => {
-            if (index === currentIndex) {
-                image.style.display = 'block';
-            } else {
-                image.style.display = 'none';
-            }
-        });
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
     }
-    updateImage();
+
+    const subscribeForm = document.getElementById('subscribe-form');
+
+    subscribeForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById('subscribe-email').value;
+
+        if (!email) {
+            alert('Por favor, ingrese su correo electrónico.');
+        } else if (!validateEmail(email)) {
+            alert('Por favor, ingrese un correo electrónico válido.');
+        } else {
+            alert('Suscripción exitosa.');
+            subscribeForm.reset();
+        }
+    });
 });
