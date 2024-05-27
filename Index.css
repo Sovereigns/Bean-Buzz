@@ -5,138 +5,312 @@ body {
     box-sizing: border-box;
 }
 
-header {
-    background-color: #8B4513; 
-    color: white;
-}
-
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    background-color: #2C1A0A;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
 }
 
 .logo a {
-    color: white;
+    color: #fff;
+    text-decoration: none;
     font-size: 1.5em;
-    text-decoration: none;
-    font-weight: bold;
 }
 
-.nav-links {
-    list-style: none;
+.nav-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    flex-grow: 1;
 }
 
-.nav-links li {
-    margin: 0 15px;
+.nav-menu li {
+    margin: 0 10px;
 }
 
-.nav-links a {
-    color: white;
+.nav-menu a {
+    color: #fff;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    font-size: 1em;
 }
 
-.nav-links a:hover {
-    color: #ff9800;
+.cart-icon img {
+    width: 25px;
+    height: auto;
+}
+
+.cart-count {
+    color: #fff;
+    font-size: 1em;
+    margin-left: 5px;
 }
 
 .welcome-section {
-    text-align: center;
-    background-image: url('img/Default_Banner_horizontal_con_taza_de_caf_y_granos_de_caf_en_e_0.jpg'); 
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 300px;
-}
-
-.welcome-section h1 {
-    font-size: 5em; 
-    text-align: right;
-}
-
-.about {
-    background-color: #8f3c0193; 
-    padding: 100px 20px;    
-    width: 100%;
-    margin: 0;
-    box-sizing: border-box; 
-    text-align: center;
-    margin-bottom: 100px;
-}
-
-#gallery {
-    margin-top: 20px;
-    text-align: center;
-    margin-bottom: 100px;
-}
-
-.image-gallery {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+    align-items: center;
+    padding: 100px 20px;
+    background-color: #EDE4E0;
 }
 
-.image-gallery img {
-    width: 30%;
-    max-width: 800px;
+.welcome-content {
+    max-width: 600px;
+    margin-right: 20px;
+}
+
+.welcome-content h1 {
+    font-size: 3em;
+    color: #2C1A0A;
+    margin: 0;
+}
+
+.welcome-content p {
+    font-size: 1.2em;
+    color: #2C1A0A;
+    margin: 20px 0;
+}
+
+.welcome-content button {
+    padding: 10px 20px;
+    background-color: #A87532;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.welcome-content button:hover {
+    background-color: #8A6430;
+}
+
+.welcome-image img {
+    max-width: 100%;
+    height: auto;
     border-radius: 8px;
 }
 
-#prevBtn, #nextBtn {
-    background-color: #8B4513;
-    color: white;
+.menu-section {
+    background-color: #4B2A0C;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.menu-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    margin: 20px;
+    text-align: center;
+}
+
+.menu-item img {
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+.menu-item button {
+    padding: 10px 20px;
+    background-color: #A87532;
     border: none;
-    padding: 10px 25px;
-    border-radius: 100px;
+    color: #fff;
     cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px;
 }
 
-#prevBtn:hover, #nextBtn:hover {
-    background-color: #7A3E12;
+.menu-item button:hover {
+    background-color: #8A6430;
 }
 
-#prevBtn {
-    margin-right: 10px; 
+.gallery-section {
+    background-color: #EDE4E0;
+    padding: 50px 20px;
+}
+
+.gallery-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    margin: 20px;
+    text-align: center;
+}
+
+.gallery-item img {
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+.about-section {
+    background-color: #4B2A0C;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-section p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.contact-section {
+    background-color: #EDE4E0;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#contact-form {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form label {
+    font-size: 1em;
+    color: #2C1A0A;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #2C1A0A;
+    border-radius: 4px;
+}
+
+#contact-form button {
+    padding: 10px 20px;
+    background-color: #A87532;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#contact-form button:hover {
+    background-color: #8A6430;
+}
+
+.contact-image {
+    max-width: 400px;
+    margin-left: 20px;
+}
+
+.contact-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 footer {
-    background-color: #8B4513;
-    color: white;
-    padding: 40px 20px;
+    background-color: #2C1A0A;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
-.social-media {
+.footer-subscribe {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-subscribe h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+#subscribe-form {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.social-media a {
-    color: white;
-    text-decoration: none;
-    margin-left: 50px; 
+#subscribe-form input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #fff;
+    border-radius: 4px;
 }
 
-#btnScrollToTop {
-    background-color: white;
-    color: black; 
-    border: none;
+#subscribe-form button {
     padding: 10px 20px;
-    border-radius: 5px;
+    background-color: #A87532;
+    border: none;
+    color: #fff;
     cursor: pointer;
-    margin-left: 50px;
+    font-size: 1em;
 }
 
-#btnScrollToTop:hover {
-    background-color: black;
-    color: white; 
+#subscribe-form button:hover {
+    background-color: #8A6430;
+}
+
+.footer-info {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-social {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-social img {
+    width: 30px;
+    height: auto;
+    margin: 0 10px;
 }
